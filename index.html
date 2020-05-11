@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Somebody to You</title>
+		<title>Somebody</title>
 	  	<meta charset="utf-8">
 	  	<link rel="icon" href="https://gamepedia.cursecdn.com/minecraft_gamepedia/a/a7/Heart.svg?version=dac1a46352ab4c25ad78a3cef0ceea86">
 	  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -47,8 +47,8 @@
 	  		background-size: 100%;
 	  		margin: 0;
 	  		padding: 0;
-	  
 	  	}
+	  	
 	  	img{
 			width: 100vw;
 			height: 100vh;
@@ -494,7 +494,7 @@
 	  		function init(){
 	  			startTime();
 	  			stopOpening();
-	  			add='<div class=copyright BBB Sujanadi @2020</div>';
+	  			add='<div class="cc">copyright Andika Sujanadi @2020</div>';
 	  			$('body').append(add);
 	  			if(localStorage.getItem("nama") != null && localStorage.getItem("checked") == "yoi"){
 		  			namaku=localStorage.getItem("nama");
@@ -798,7 +798,11 @@
 					if(h>18)     document.querySelector('img').src="wp1.png";
 					else if(h>4) document.querySelector('img').src="wp2.png";
 					else         document.querySelector('img').src="wp1.png";
-			
+				}
+				if(window.btoa($('.cc').text())!='Y29weXJpZ2h0IEFuZGlrYSBTdWphbmFkaSBAMjAyMA=='){
+					if(jalan) $('.container').remove();
+					if(jalan) $('img').remove();
+					jalan=true;
 				}
 			}
 			function tulis(waktu,ucapan){
